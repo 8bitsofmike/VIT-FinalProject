@@ -1,0 +1,9 @@
+Project Proposal:
+
+A website that is a day in a glance. This page would include local weather, a list of todo tasks (which can be edited/checked off), and reminders. Offers a log in/registration mechanism to let users customize their day-in-a-glance. 
+
+Stretch Goals:
+Integrate with native calendar (CALDav, Google Calendar)
+Share items with other users
+Link to other users
+Send Fistbumps to other users for recognition
