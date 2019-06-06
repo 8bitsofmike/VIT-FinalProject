@@ -1,0 +1,44 @@
+body 
+{
+    background: grey;
+}
+
+h1
+{
+    color: white;
+    text-align: center;
+}
+
+p 
+{
+    color: red;
+}
+
+.header 
+{
+    padding: 60px;
+    text-align: center;
+    background: steelblue;
+    font-size: 0.8em;
+    background-color: darkslategray;
+    font-family: 'Rancho';
+    font-weight: 400;
+    font-size: 4em;
+    text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
+    height: 50vh;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+}
+
+#weather
+{
+    display: flexbox;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 4em;
+    background-image: linear-gradient(to right top, #0e668f, #5298b8, #5ea3bf, #96c4d7, #c9edfa);
+
+}
