@@ -9,22 +9,37 @@ h1
     text-align: center;
 }
 
+.flex_center_wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.flex-child-center
+{
+    width: 50%;
+    padding: 10px;
+}
+
 .header 
 {
-    padding: 60px;
-    text-align: center;
-    background: steelblue;
+    
+    /* text-align: center; */
     font-size: 0.5em;
-    background-color: darkslategray;
-    font-family: 'Rancho';
+    /* background-color: rgb(0, 87, 154); */
+    /* font-family: 'Rancho'; */
     font-weight: 400;
     font-size: 4em;
-    text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
-    height: 50vh;
+    color:white;
+    /* text-shadow: .1em .1em 0 rgba(0,0,0,0.3); */
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
+    /* background-image: linear-gradient(to left top, #0774a7, #21749b, #2e7996, #51abce, #c9edfa); */
 }
 
 .navbar 
