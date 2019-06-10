@@ -5,64 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Day in a Glance</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d" rel="stylesheet";>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <!-- <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d" rel="stylesheet";> -->
     <!-- <script src="jquery-3.4.0.min.js"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="moment-with-locales.min.js"></script> -->
+    
 </head>
 <body>
-    <div class="header">
-        <h1>Welcome To Your Day At A Glance</h1>
-        <div class="font-effect-3d">
-            <p></p>
-            <div id='today'></div>
+    <!-- <div class="ui inverted segment">
+        <div class="ui inverted secondary pointing menu">
+            <div class="right menu">
+                <a class="active item">
+                Home
+                </a>
+                <a class="item">
+                Messages
+                </a>
+                <a class="item">
+                Friends
+                </a>
+            </div>
         </div>
+    </div> -->
+
+    <div class="ui cards">
+            <div class="card">
+              <div class="content">
+                <img class="right floated mini ui image" src="">
+                <div class="header">
+                  Elliot Fu
+                </div>
+                <div class="meta">
+                  Friends of Veronika
+                </div>
+                <div class="description">
+                  Elliot requested permission to view your contact details
+                </div>
+              </div>
+              <div class="extra content">
+                <div class="ui two buttons">
+                  <div class="ui basic green button">Approve</div>
+                  <div class="ui basic red button">Decline</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="content">
+                <img class="right floated mini ui image" src="">
+                <div class="header">
+                  Jenny Hess
+                </div>
+                <div class="meta">
+                  New Member
+                </div>
+                </div>
+
+
+
+<!-- <div class="weather">
+    <div class="font-effect-3d">
+        <div id="description"></div>
+            <div id="currenttemp"></div>
+            <div id="cloudy"></div>
+            <div id="sunrise"></div>
+            <div id="sunset"></div>
     </div>
-
-    <div id="weather">
-        <div class="font-effect-3d">
-            <div id="description"></div>
-                <div id="currenttemp"></div>
-                <div id="cloudy"></div>
-                <div id="sunrise"></div>
-                <div id="sunset"></div>
-        </div>
-    </div>
-    
-    <script lang="text/javascript">
-    function weatherBallon(cityID)
-    {   
-        //this is the key from OWM site
-        var key = '1173377dfba588826f50605cbe8d5860';
-        
-        //using Fetch to grab data from OWM API
-        fetch('https://api.openweathermap.org/data/2.5/weather?id=' + cityID + '&appid=' + key)
-        .then(function(resp) { return resp.json() })
-        .then(function(data) {
-            // console.log(data);
-            drawWeather(data);
-        })
-        .catch(function() {
-        }) ;
-    }
-
-    window.onload = function() {
-    weatherBallon (5405380);
-    }
-
-    function drawWeather (d)
-    {
-        var celcius = Math.round(parseFloat(d.main.temp)-273.15);
-        var farenheit = Math.round(((parseFloat(d.main.temp)-279.15)*1.8)+32);
-
-        document.getElementById('description').innerHTML = d.weather[0].description;
-        document.getElementById('currenttemp').innerHTML = 'The current temperature is ' + farenheit + '&deg;';
-        document.getElementById('today').innerHTML = 'Today\'s weather forcast for ' + d.name + ' is:';
-        document.getElementById('sunrise').innerHTML = 'The sun will rise at ' + d.sys.sunrise;
-        document.getElementById('sunset').innerHTML = 'The sun will set at ' + d.sys.sunset;
-    }
-    </script>
-
+</div> -->
+    <script type="text/javascript" src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>   
 </html>

@@ -9,36 +9,51 @@ h1
     text-align: center;
 }
 
-p 
-{
-    color: red;
-}
-
 .header 
 {
     padding: 60px;
     text-align: center;
     background: steelblue;
-    font-size: 0.8em;
+    font-size: 0.5em;
     background-color: darkslategray;
     font-family: 'Rancho';
     font-weight: 400;
     font-size: 4em;
     text-shadow: .1em .1em 0 rgba(0,0,0,0.3);
     height: 50vh;
-    display: flexbox;
+    display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     background-image: linear-gradient(to right top, #99bbcb, #a5c7d7, #b1d4e2, #bde0ee, #c9edfa);
 }
 
-#weather
+.navbar 
 {
-    display: flexbox;
+    background-color: #0e668f;
+    padding: 20px;
+    text-align: right;
+}
+
+#today
+{
+    font-size: 1em;
+}
+
+.weather
+{
+    /*stitch outline*/
+    outline: 2px dashed #98abb9;
+    outline-offset: -5px;
+
+    margin: 50px auto;
+    display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    font-size: 4em;
+    font-size: 2.5em;
     background-image: linear-gradient(to right top, #0e668f, #5298b8, #5ea3bf, #96c4d7, #c9edfa);
 
+     /*shadow*/
+    -webkit-box-shadow: 4px 4px 4px #000;
+    -moz-box-shadow: 4px 4px 4px #000;
+    box-shadow: 4px 4px 4px #000;
 }
