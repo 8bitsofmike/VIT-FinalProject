@@ -31,76 +31,64 @@
                 </div>
             </div>
     </div>
-        
-        <!-- <div class="ui inverted segment">
-            <div class="ui inverted secondary pointing menu">
-                <div class="right menu">
-                    <a class="active item">
-                    Home
-                    </a>
-                    <a class="item">
-                    Messages
-                    </a>
-                    <a class="item">
-                    Friends
-                    </a>
-                </div>
+
+    <div class="ui two column centered grid">
+        <div class="flex_center_wrapper">
+            <div class="flex-child-center">
+            <div id="cityselect">
+                <form class = "ui form" name="cityform" id="cityform">
+                    City: <input type="text" name="cityname" id="cityname"><br>
+                    <button class="ui teal button" input type="submit" value="Submit" onsubmit="validateForm()">Choose City</button>
+                </form>         
             </div>
-        </div> -->
-    
-
-    
-
-
-
-    <div class="flex_center_wrapper">
-        <div class="flex-child-center">
-        <div id="cityselect">
-            <form class = "ui form" name="cityform" id="cityform">
-                City: <input type="text" name="cityname" id="cityname"><br>
-                <button class="ui teal button" input type="submit" value="Submit" onsubmit="validateForm()">Choose City</button>
-            </form>         
-        </div>
-        </div>
-
-        <div class="flex-child-center">
-        <div class="ui centered cards">
-            <div class="card">
-                <div class="content">
-                    <img class="right floated mini ui image" src="">
-                    <div class="cityheader" id="cityheader">
-                    </div>
-                <div class="meta" id="currenttemp">   
-                </div>
-                <div class="description" id="todaysforcast"><br>
-                <div id=clouds></div>
-                </div>
-                <div class="sunrise" id="sunrise">
-                </div>
-                <div class="sunset" id="sunset">
-                </div>
-                    
-                </div>
             </div>
-        </div>
-        </div>
 
-        <div class="flex-child-center">
-            <div class="ui inverted segment">
-                    <div class="ui inverted form">
-                        <div class="fields">
-                            <div class="ten wide field">
-                            <label>To Do Item</label>
-                            <input placeholder="Enter your to do item" type="text">
-                            </div>
+            <div class="flex-child-center">
+            <div class="ui centered cards">
+                <div class="card">
+                    <div class="content">
+                        <img class="right floated mini ui image" src="">
+                        <div class="cityheader" id="cityheader">
                         </div>
+                    <div class="meta" id="currenttemp">   
+                    </div>
+                    <div class="description" id="todaysforcast"><br>
+                    <div id=clouds></div>
+                    </div>
+                    <div class="sunrise" id="sunrise">
+                    </div>
+                    <div class="sunset" id="sunset">
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+            </div>
 
-                    <div class="ui submit button">Submit</div>
+            <div class="flex-child-center">
+                <div class="ui inverted segment">
+                        <div class="ui inverted form">
+                            <div class="fields">
+                                <div class="ten wide field">
+                                <label>To Do Item</label>
+                                <input placeholder="Enter your to do item" type="text">
+                                </div>
+                            </div>
+
+                        <div class="ui submit button">Submit</div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-            
+
+        <div class="container ui inverted segment">
+            <h1 class="ui center aligned teal header">TODO LIST</h1>
+            <ul class="todo-list js-todo-list flex-child-center"></ul>
+            <form class="js-form ui inverted form">
+                <input autofocus type="text" placeholder="Ex: write some js code" class="js-todo-input">
+            </form>
+        </div>
+    </div>       
 <script type="text/javascript" src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
