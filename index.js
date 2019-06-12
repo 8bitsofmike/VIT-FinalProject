@@ -69,7 +69,7 @@ function addTodo(text)
         <input id="${todo.id}" type="checkbox"/>
         <label for="${todo.id}" class="tick js-tick"></label>
         <span>${todo.text}</span>
-        <button class="ui button delete-todo js-delete-todo"></button>
+        <button class="ui button delete-todo js-delete-todo" id="removebutton">Delete</button>
     </li>
     `);
 }

@@ -10,10 +10,27 @@ h1
     text-align: center;
 }
 
-.card
+label, span
 {
-    width: 80%;
+    font-size: 1.5em;
+    padding-right: 1em;
 }
+
+#removebutton
+{
+    width: 200px;
+}
+
+#card
+{
+    width: 100%;
+}
+
+.js-form
+{
+    font-size: 1.5em; 
+}
+
 .container
 {
     display: flex;
@@ -57,6 +74,11 @@ h1
     /* background-image: linear-gradient(to left top, #0774a7, #21749b, #2e7996, #51abce, #c9edfa); */
 }
 
+.footer
+{
+    text-align: center;
+    height: 10%;
+}
 .navbar 
 {
     background-color: #0e668f;
