@@ -26,9 +26,19 @@ label, span
     width: 100%;
 }
 
-#news
+.newsheader
 {
-    font-size: 50%;
+    font-size: 80%;
+}
+
+.newsmeta
+{
+    font-size: 60%; 
+}
+
+.newsdescription
+{
+    font-size: 75%;
 }
 
 #main

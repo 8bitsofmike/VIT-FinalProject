@@ -193,9 +193,9 @@ function newsToCard(data) {
         shell.innerHTML =
             `
                 <div class="content">
-                    <div class="header">${news.content}</div>
-                    <div class="meta">${news.publishedAt}</div>
-                    <div class="description">
+                    <div class="newsheader">${news.source.name}</div>
+                    <div class="newsmeta">${news.publishedAt}</div>
+                    <div class="newsdescription">
                         <p>${news.description}</p>
                         <p>Many people also have their own barometers for what makes a cute dog.</p>
                     </div>
