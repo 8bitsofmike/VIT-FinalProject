@@ -26,6 +26,13 @@ label, span
     width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+    #card {
+      height: 100%;
+      font-size: 50%;
+    }
+  }
+
 .js-form
 {
     font-size: 1.5em; 
@@ -52,8 +59,19 @@ label, span
 
 .flex-child-center
 {
-    width: 50%;
+    width: 70%;
     padding: 10px;
+}
+
+.flex_spbtwn_wrapper
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-direction: column;
+    align-content: center;
+    align-items: center;
+    text-align: center; */
 }
 
 .header 
@@ -76,8 +94,10 @@ label, span
 
 .footer
 {
+    display: flex;
     text-align: center;
-    height: 10%;
+    min-height: 50vh;
+    flex-direction: column;
 }
 .navbar 
 {

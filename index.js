@@ -1,9 +1,59 @@
 
 //access OpenWeather API and draw to site
+// window.onload = function() 
+// {
+//     weatherBallon (nameCity);
+// }
 window.onload = function() 
 {
-    weatherBallon (5405380);
+    getSchool();
 }
+
+function getSchool()
+{   
+    //this is the key from OWM site
+    var key = "6cIJQHwVG2gQoWzAAn2DMbNsTde4DlCR8VENo6Zl";
+    
+    //using Fetch to grab data from OWM API
+    fetch("https://api.data.gov/ed/collegescorecard/v1/schools.json?school.degrees_awarded.predominant=2,3&_fields=id,school.name,latest.student.size&api_key=" + key)
+    .then(function(resp) { return resp.json() })
+    .then(function(data) {
+        console.log(data);
+
+    })
+    .catch(function() {
+    }) ;
+}
+
+let nameCity
+
+//grab form
+const cityForm = document.querySelector('#cityform');
+//console.log(cityForm + " This is the cityform");
+
+cityForm.addEventListener('submit', event =>
+{
+    event.preventDefault();
+    const input = document.querySelector('.cityname');
+
+    const text = input.value.trim();
+//    console.log(text[Object.keys(text)[0]]);
+
+        if(text !== '')
+        {
+            nameCity = text;
+            console.log(text);
+            weatherBallon(nameCity);
+            
+            input.value = '';
+            input.focus();
+        }
+        else
+        {
+            alert("Please enter a valid city name");
+        }
+});
+
 
 function weatherBallon(cityID)
 {   
@@ -11,11 +61,18 @@ function weatherBallon(cityID)
     var key = "1173377dfba588826f50605cbe8d5860";
     
     //using Fetch to grab data from OWM API
-    fetch("https://api.openweathermap.org/data/2.5/weather?id=" + cityID + "&units=imperial" + "&appid=" + key)
+    fetch("https://api.openweathermap.org/data/2.5/weather?q=" + nameCity + "&units=imperial" + "&appid=" + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
-        console.log(data);
-        drawWeather(data);
+        console.log(data.cod);
+        if(data.cod == 200)
+        {
+            drawWeather(data);
+        }
+        else
+        {
+            alert("Please enter a valid city name");
+        }
     })
     .catch(function() {
     }) ;
@@ -41,8 +98,7 @@ function drawWeather (d)
     document.getElementById("sunset").innerHTML = "The sun will set at " + sunsetDate;
 }
 
-    
-//todo list section
+/******todo list section******/
 let todoItems = [];
 
 function addTodo(text)
@@ -74,6 +130,7 @@ function addTodo(text)
     `);
 }
 
+//grab form
 const form = document.querySelector('.js-form');
 
 //block default action
@@ -96,7 +153,7 @@ form.addEventListener('submit', event =>
     }
 });
 
-// add listenter to mark task "done"
+// add listener to mark task "done"
 const list = document.querySelector('.js-todo-list');
 list.addEventListener('click', event =>
 {
