@@ -26,6 +26,17 @@ label, span
     width: 100%;
 }
 
+#news
+{
+    font-size: 50%;
+}
+
+#main
+{
+    border: 3px black;
+    text-align: center;
+}
+
 @media only screen and (max-width: 600px) {
     #card {
       height: 100%;

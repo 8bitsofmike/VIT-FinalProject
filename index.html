@@ -10,6 +10,7 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d" rel="stylesheet";> -->
     <script src="jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <script src="moment-with-locales.min.js"></script> -->
     
 </head>
@@ -20,10 +21,10 @@
         <div class="ui inverted teal inverted pointing menu">
                 <div class="ui inverted teal menu">
                     <div class="item">
-                        <div class="ui primary button">Sign up</div>
+                        <div class="ui primary button" id="signupbutton">Sign up</div>
                     </div>
                     <div class="item">
-                        <div class="ui button">Log-in</div>
+                        <div class="ui button" id="loginbutton">Log-in</div>
                     </div>
                     </div>
                 <div class="right inverted teal menu">
@@ -43,6 +44,7 @@
 <!-- TODO: Link up city search to OWM card -->
     <div class="flex_center_wrapper">
             <div class="flex-child-center">
+                <h1 class="ui center aligned teal header">LOCAL WEATHER REPORT</h1>
                 <div id="cityselect">
                     <form action="#" class="ui form cityform" name="cityform" id="cityform">
                         City:<input type="text" name="cityname" class="cityname" value="Vallejo, CA"><br>
@@ -55,6 +57,7 @@
             <div class="flex-child-center">
                 <div class="ui centered card" id="card">
                         <div class="content">
+                                
                             <img class="right floated mini ui image" src="">
                             <div class="cityheader" id="cityheader">
                             </div>
@@ -71,8 +74,9 @@
                         </div>
                     </div>
                 </div>
-            
-        </div>
+
+
+                        
 <!-- TODO: implement todo list in semantic style -->   
         <div class="flex_center_wrapper">
             <div class="flex-child-center">
@@ -80,14 +84,43 @@
                 <h1 class="ui center aligned teal header">TODO LIST</h1>
                 <ul class="todo-list js-todo-list flex-child-center"></ul>
                 <form class="js-form ui inverted form">
-                    <input autofocus type="text" placeholder="Ex: write some js code" class="js-todo-input">
+                    <input autofocus type="text" placeholder="Ex: Write some js code, or Pay AT&T bill" class="js-todo-input">
                 </form>
             </div>
             </div>
         </div>
+    </div>
+
+    <!-- stackable grid for news -->
+    <h1 class="ui center aligned teal header">TOP NEWS</h1>
+        <div class="ui container" id="main">
+            <div class="ui cards">
+                <div class="card">
+                    <div id="card-append"></div>
+                </div>
+            </div>
+        </div>            
+        <!-- <div class="flex-child-center">
+                <div class="container inverted">
+                    <div class="column">
+                        <div class="ui centered card" id="card">
+                            <div id="cityselect">
+                            <div class="content">
+                                <img class="right floated mini ui image" src="">
+                                    <div class="newsheader"></div>
+                                    <div id="newssource"></div>
+                                    <div id="news"></div>
+                                    <div id="newsurl"></div><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        
     
 <!-- TODO: set up footer to lock at bottom -->
-<div class="ui inverted vertical footer segment">
+<div class="ui vertical inverted footer segment">
     <div class="ui container">
         <a href="https://www.8bitsofmike.com" id="copyright">©2019 8BitsofMike</a>
     </div>

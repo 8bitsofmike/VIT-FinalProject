@@ -1,29 +1,13 @@
 
 //access OpenWeather API and draw to site
-// window.onload = function() 
+ window.onload = function() 
+ {
+    grabNewsAPI();
+ }
 // {
 //     weatherBallon (nameCity);
 // }
-window.onload = function() 
-{
-    getSchool();
-}
 
-function getSchool()
-{   
-    //this is the key from OWM site
-    var key = "6cIJQHwVG2gQoWzAAn2DMbNsTde4DlCR8VENo6Zl";
-    
-    //using Fetch to grab data from OWM API
-    fetch("https://api.data.gov/ed/collegescorecard/v1/schools.json?school.degrees_awarded.predominant=2,3&api_key=" + key)
-    .then(function(resp) { return resp.json() })
-    .then(function(data) {
-        console.log(data);
-
-    })
-    .catch(function() {
-    }) ;
-}
 
 let nameCity
 
@@ -193,4 +177,77 @@ function toggleDone(key)
     {
         item.classList.remove('done');
     }
+}
+
+
+///////////////NewsAPI - top us news headlines
+let sourceName
+let sourceTitle
+let articleDesc
+let articleURL
+let articleIMG
+let articleDate
+
+
+///try to dynamically create cards
+let appendHere = document.querySelector('#card-append');
+let card
+let shell 
+
+function grabNewsAPI()
+{
+    fetch("https://newsapi.org/v2/top-headlines?country=us&apiKey=01e38043543b4baaa4f685e1b975aacc")
+        .then(function(resp) { return resp.json() })
+        .then(function(data) {
+            newsToCard(data);
+        })
+        .catch(function() {
+        }) ;
+}
+
+function newsToCard(newsdata)
+{    
+    // console.log(newsdata)
+
+    //console.log(data.articles[0].urlToImage);
+        
+    sourceName = newsdata.articles[0].source.name;
+        
+    articleDesc = newsdata.articles[0].description;
+    sourceTitle = newsdata.articles[0].title;
+    articleURL = newsdata.articles[0].urlToImage;
+    articleDate = newsdata.articles[0].publishedAt;
+    
+    // document.getElementById("newsheader").innerHTML = sourceTitle;
+    // document.getElementById("newsurl").innerHTML = articleURL;
+    // document.getElementById("newssource").innerHTML = sourceName;
+    // document.getElementById("news").innerHTML = articleDesc;
+    // document.getElementById("newsurl").innerHTML = articleURL;
+    
+    createHTML(["newssource", "news", "newsurl"], [sourceName, articleDesc, articleURL]);
+        
+}
+
+function createHTML (strID, data)
+{
+   // console.log(strID.length, data.length);
+    for (let i = 0; i < strID.length; i++)
+    {   
+        news = data[i];
+        shell = document.createElement('div');
+        shell.classList.add('card');
+        shell.innerHTML = 
+        `
+            <div class ="content">
+                <div class="description" id="news">
+                    ${news}
+                </div>
+            </div>
+        `
+        // document.getElementById(strID[i]).innerHTML = data[i];
+        
+        appendHere.appendChild(shell);
+        console.log(strID.length)
+    }
+    
 }
