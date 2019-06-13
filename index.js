@@ -15,7 +15,7 @@ function getSchool()
     var key = "6cIJQHwVG2gQoWzAAn2DMbNsTde4DlCR8VENo6Zl";
     
     //using Fetch to grab data from OWM API
-    fetch("https://api.data.gov/ed/collegescorecard/v1/schools.json?school.degrees_awarded.predominant=2,3&_fields=id,school.name,latest.student.size&api_key=" + key)
+    fetch("https://api.data.gov/ed/collegescorecard/v1/schools.json?school.degrees_awarded.predominant=2,3&api_key=" + key)
     .then(function(resp) { return resp.json() })
     .then(function(data) {
         console.log(data);

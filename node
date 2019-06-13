@@ -1,0 +1,12 @@
+Welcome to Node.js v12.4.0.
+Type ".help" for more information.
+> > Thrown:
+console.log('hello from nodejs!')l
+                                 ^
+
+SyntaxError: Unexpected identifier
+> > hello from nodejs!
+undefined
+> > > > Thrown:
+ReferenceError: exit is not defined
+> ... 
